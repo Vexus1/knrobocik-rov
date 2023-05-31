@@ -187,13 +187,17 @@ class Game:
                 direction = GameObject.STRAIGHT_HORIZONTAL.value
             if trace_col[pStep] == trace_col[nStep]:
                 direction = GameObject.STRAIGHT_VERTICAL.value
-            if (trace_row[pStep] == trace_row[nStep]+1 and trace_col[pStep] == trace_col[nStep]+1 and trace_row[stepNo] == trace_row[nStep]) or (trace_row[pStep]+1 == trace_row[nStep] and trace_col[pStep]+1 == trace_col[nStep] and trace_col[stepNo] == trace_col[nStep]):
+            if (trace_row[pStep] == trace_row[nStep]+1 and trace_col[pStep] == trace_col[nStep]+1 and trace_row[stepNo] == trace_row[nStep])
+            or (trace_row[pStep]+1 == trace_row[nStep] and trace_col[pStep]+1 == trace_col[nStep] and trace_col[stepNo] == trace_col[nStep]):
                 direction = GameObject.TURN_LEFT_TO_BOTTOM.value
-            if (trace_row[pStep]+1 == trace_row[nStep] and trace_col[pStep] == trace_col[nStep]+1 and trace_col[stepNo] == trace_col[nStep]) or (trace_row[pStep] == trace_row[nStep]+1 and trace_col[pStep]+1 == trace_col[nStep] and trace_row[stepNo] == trace_row[nStep]): 
+            if (trace_row[pStep]+1 == trace_row[nStep] and trace_col[pStep] == trace_col[nStep]+1 and trace_col[stepNo] == trace_col[nStep])
+            or (trace_row[pStep] == trace_row[nStep]+1 and trace_col[pStep]+1 == trace_col[nStep] and trace_row[stepNo] == trace_row[nStep]): 
                 direction = GameObject.TURN_RIGHT_TO_BOTTOM.value
-            if (trace_row[pStep]+1 == trace_row[nStep] and trace_col[pStep] == trace_col[nStep]+1 and trace_row[stepNo] == trace_row[nStep]) or (trace_row[pStep] == trace_row[nStep]+1 and trace_col[pStep]+1 == trace_col[nStep] and trace_col[stepNo] == trace_col[nStep]):
+            if (trace_row[pStep]+1 == trace_row[nStep] and trace_col[pStep] == trace_col[nStep]+1 and trace_row[stepNo] == trace_row[nStep])
+            or (trace_row[pStep] == trace_row[nStep]+1 and trace_col[pStep]+1 == trace_col[nStep] and trace_col[stepNo] == trace_col[nStep]):
                 direction = GameObject.TURN_LEFT_TO_TOP.value
-            if (trace_row[pStep] == trace_row[nStep]+1 and trace_col[pStep] == trace_col[nStep]+1 and trace_col[stepNo] == trace_col[nStep]) or (trace_row[pStep]+1 == trace_row[nStep] and trace_col[pStep]+1 == trace_col[nStep] and trace_row[stepNo] == trace_row[nStep]): 
+            if (trace_row[pStep] == trace_row[nStep]+1 and trace_col[pStep] == trace_col[nStep]+1 and trace_col[stepNo] == trace_col[nStep])
+            or (trace_row[pStep]+1 == trace_row[nStep] and trace_col[pStep]+1 == trace_col[nStep] and trace_row[stepNo] == trace_row[nStep]): 
                 direction = GameObject.TURN_RIGHT_TO_TOP.value
             self.current_gamefield[int(trace_row[stepNo])][int(trace_col[stepNo])] = direction
 
